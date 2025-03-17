@@ -1,5 +1,5 @@
 ## De DBA Para Engenheira de Dados
-Este espaço marca o início da minha jornada como Engenheira de Dados. Aqui, compartilharei exercícios e laboratórios desenvolvidos durante o curso de *Especialização em Engenharia de Dados*, promovido pela comunidade *Jornada de Dados*. Abaixo, você encontra o link com mais informações sobre a comunidade. Então let's go!
+Este espaço marca o início da minha jornada como Engenheira de Dados. Aqui, compartilharei exercícios e laboratórios desenvolvidos durante o curso de *Especialização em Engenharia de Dados*, promovido pela comunidade *Jornada de Dados*. Abaixo, você encontra o link com mais informações sobre a comunidade. Então, let's go!
 
 ### Principais tópicos abordados:
 - Configurar ambiente de desenvolvimento, usando VScode, Python, Git e WSL2;
