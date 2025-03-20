@@ -46,7 +46,7 @@ numero = int(texto)  # Converte a string para inteiro
 print(numero * 2)  # Saída: 20
 ```
 
-## Funções comuns de conversão:
+### Funções comuns de conversão:
 - int(): Converte para inteiro.
 - float(): Converte para número de ponto flutuante.
 - str(): Converte para string.
@@ -66,11 +66,11 @@ print(numero * 2)  # Saída: 20
 - Com o tratamento de erros, é mais fácil identificar a origem de problemas durante o desenvolvimento ou a manutenção do código.
 - Usar logs ou mensagens específicas em exceções ajuda a rastrear erros complexos.
 
-### Prevenir Dados Corrompidos
+### Prevenir Dados Corrompidos:
 - Em sistemas que manipulam dados críticos (bancos de dados, arquivos, etc.), erros não tratados podem levar à corrupção ou perda de informações.
 - Usar tratamento adequado garante que, mesmo em caso de erros, os dados sejam protegidos.
 
-### Flexibilidade e Personalização
+### Flexibilidade e Personalização:
 Com o tratamento de erros, pode-se personalizar as respostas do programa a diferentes tipos de falhas, permitindo comportamentos alternativos ou a recuperação do sistema.
 
 ### Conclusão: 
