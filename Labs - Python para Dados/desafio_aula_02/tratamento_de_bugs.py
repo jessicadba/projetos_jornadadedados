@@ -1,35 +1,37 @@
-# Solicita e valida o nome do usuário
-while True:
-    nome = input("Informe o seu nome: ").strip()  # Remove espaços desnecessários
-    if nome.isdigit() or not nome:  # Verifica se o nome contém apenas números ou está vazio
-        print("Erro: Por favor, insira um nome válido (não numérico e não vazio).")
+# Solicita ao usuário que digite seu nome
+try:
+    nome = input("Digite seu nome: ").strip()
+    if len(nome) == 0:
+        print("O nome não pode estar vazio.")
+    elif any(char.isdigit() for char in nome):
+        print("O nome não deve conter números.")
     else:
-        break  # Nome válido, sai do loop
+        print("Nome válido:", nome)
 
-# Solicita e valida o valor do salário
-while True:
-    try:
-        salario = float(input("Informe o valor do seu salário bruto: "))
-        if salario < 0:
-            print("Erro: O salário não pode ser negativo. Tente novamente.")
+        # Solicita ao usuário que digite o valor do seu salário
+        salario_input = input("Digite o valor do seu salário: ")
+        if salario_input.replace('.', '', 1).isdigit():  # Valida se é um número
+            salario = float(salario_input)
+            if salario < 0:
+                print("Por favor, digite um valor positivo para o salário.")
+            else:
+                # Solicita ao usuário que digite o valor do bônus recebido
+                bonus_input = input("Digite o valor do bônus recebido: ")
+                if bonus_input.replace('.', '', 1).isdigit():  # Valida se é um número
+                    bonus_recebido = float(bonus_input)
+                    if bonus_recebido < 0:
+                        print("Por favor, digite um valor positivo para o bônus.")
+                    else:
+                        # Calcula o bônus final e o KPI
+                        bonus_final = bonus_recebido * 1.2  # Exemplo, ajuste conforme necessário
+                        kpi = (salario + bonus_final) / 1000  # Exemplo simples de KPI
+
+                        # Exibe os resultados ao usuário
+                        print(f"Seu KPI é: {kpi:.2f}")
+                        print(f"{nome}, seu salário é R${salario:.2f} e seu bônus final é R${bonus_final:.2f}.")
+                else:
+                    print("Entrada inválida para o bônus. Por favor, digite um número válido.")
         else:
-            break  # Salário válido, sai do loop
-    except ValueError:
-        print("Erro: Entrada inválida. Digite um número válido.")
-
-# Solicita e valida o percentual de bônus
-while True:
-    try:
-        bonus = float(input("Informe o valor do bônus recebido (em %): "))
-        if bonus < 0:
-            print("Erro: O bônus não pode ser negativo. Tente novamente.")
-        else:
-            break  # Percentual válido, sai do loop
-    except ValueError:
-        print("Erro: Entrada inválida. Digite um número válido.")
-
-# Calcula o valor do bônus
-valor_bonus = salario * (bonus / 100)
-
-# Exibe o resultado final
-print(f"{nome}, o valor do seu bônus será de: {valor_bonus:.2f}")
+            print("Entrada inválida para o salário. Por favor, digite um número válido.")
+except Exception as e:
+    print(f"Ocorreu um erro inesperado: {e}")
