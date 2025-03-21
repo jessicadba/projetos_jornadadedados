@@ -1,6 +1,7 @@
 ## Desafio Aula 02: Refatorar o projeto da aula 01 evitando Bugs
 Tratar os possíveis erros em Python (ou em qualquer linguagem de programação) é essencial para garantir que o programa funcione de forma robusta, confiável e amigável ao usuário. Os erros mais comuns encontrados durante a execução do código Python são: TypeError, Type Check e Type Conversion.
 
+### Entendento o desafio
 **TypeError** -
 O TypeError é uma exceção que ocorre quando você tenta realizar uma operação ou função com um tipo de dado inadequado ou incompatível.
 
