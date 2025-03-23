@@ -1,7 +1,14 @@
 ## Desafio Aula 04: Type hint, Tipos complexos (Dicionários vs DataFrames Vs Tabelas Vs Excel) e Funções
-Refatorar código das aulas anteriores usando Dicionário, Type Hint e Funcões.
+**Exercícios de Listas e Dicionários**
 
-### Entendento o desafio
+- Criar uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
+- Dada a lista ["Python", "Java", "C++", "JavaScript"], remover o item "C++" e adicionar "Ruby".
+- Criar um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
+- Escrever um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
+- Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcular o preço total da lista de compras.
+
+
+## Entendento o desafio
 *Python* utiliza tipagem dinâmica e por inferência. Isso significa que não precisa declarar explicitamente o tipo de uma variável ao defini-la, pois o *Python* identifica o tipo automaticamente em tempo de execução com base no valor atribuído. Por exemplo:
 
 ```python
@@ -24,7 +31,7 @@ altura: float = 1.63
 is_dba: boll = True
 ```
 
-### Entendendo conceitos de Tipagem Forte e Tipagem Fraca
+### Conceitos de Tipagem Forte e Tipagem Fraca
 **Tipagem Forte** - 
 Python é uma linguagem de tipagem forte, o que significa que ele não converte automaticamente tipos de dados em contextos onde eles não são compatíveis. Se você tentar somar um número com uma string, por exemplo, Python irá lançar um erro:
 ```python
@@ -75,8 +82,7 @@ print(minha_lista)  # Saída: [100, 2, 3, 'Spock', 4.5]
 ```
 Pode-se adicionar ou remover elementos livremente, sem precisar definir o tamanho da lista inicialmente.
 
-## Principais métodos de listas em Python são: 
-
+### Principais métodos de listas em Python são: 
 - append(): Adiciona um elemento ao final da lista.
 ```python
 minha_lista.append(6)
@@ -139,3 +145,65 @@ print(numeros)  # Saída: [4, 3, 2, 1]
 ```
 
 ### Estrutura de dicionários em Python
+Dicionários armazenam pares chave-valor e são úteis para dados organizados em formato de "mapa" ou "tabela de busca", permitindo associar uma chave única a um valor correspondente.
+Pode-se usar dicionários para representar dados estruturados, como um cadastro de clientes, um inventário de produtos ou mesmo configurações de sistemas.
+
+**Principais características**:
+
+- **Chaves únicas:** Cada chave em um dicionário deve ser única e imutável (pode ser uma string, número, tupla, etc.).
+- **Valores variados:** Os valores podem ser de qualquer tipo, como números, strings, listas, outros dicionários, entre outros.
+- **Desordenado:** Os itens não têm uma ordem fixa (a partir do Python 3.7, a ordem de inserção é mantida, mas não é garantida como regra fundamental).
+
+```python
+# Exemplo 1
+aluno = {'nome': 'Carlos', 'idade': 22, 'curso': 'Engenharia'}
+print(aluno['nome'])  # Saída = Carlos
+
+# Exemplo 2
+contato = {
+    "nome": "Ana",
+    "telefone": "1234-5678",
+    "email": "ana@email.com"
+}
+
+# Acessando valores
+print(contato["nome"])  # Ana
+```
+
+### Principais métodos de listas em Python são: 
+- *get(chave)* - Retorna o valor associado à chave, ou *None* se não existir.
+- *keys()* - Retorna as chaves.
+- *values()* - Retorna os valores.
+- *items()* - Retorna pares chave-valor como tuplas.
+- *update(dicionario)* - Adiciona ou atualiza múltiplos pares chave-valor.
+
+```python
+produto.update({'marca': 'Samsung', 'cor': 'preto'})
+print(produto)
+```
+
+### Principais diferenças entre Lista e Dicionário em Python
+Tanto listas quanto dicionários são estruturas de dados fundamentais no Python, mas possuem diferenças importantes em sua organização e nos casos de uso. Busquei pesquisar mais afundo e encontrei essa tabela, que resume mais claramente estas diferenças:
+
+| Aspecto            | Lista                           | Dicionário     |
+|----------------    |----------------|----------------|
+| **Estrutura**         | Coleção ordenada de elementos.   | Coleção desordenada de pares chave-valor.   |
+| **Índice**            | Elementos acessados por índices numéricos (0, 1, 2, ...).                | Valores acessados por chaves únicas.          |
+| **Mutabilidade**   | Mutável (pode adicionar/remover elementos).      | Mutável (pode adicionar/remover pares chave-valor).             |
+| **Tipos de Dados** | Pode conter qualquer tipo de dado, inclusive misturados.  | As chaves devem ser imutáveis (ex.: strings, números); os valores podem variar.          |
+| **Uso Comum**      | Para armazenar dados em sequência ou em lista.  | Para mapear ou relacionar dados, como um catálogo ou tabela.       |
+| **Exemplo**        | ['maçã', 'banana', 'laranja']  | {''nome': 'Jessica', 'idade': 35, 'cidade': Rio de Janeiro}          |
+
+- Listas são ideais para sequências ordenadas, como listas de itens ou filas.
+
+```python
+frutas = ['maçã', 'banana', 'laranja']
+print(frutas[1])  # banana
+```
+
+- Dicionários são melhores para dados relacionais, como informações organizadas em formato de mapa ou tabela.
+
+```python
+aluno = {'nome': 'Jessica', 'idade': 35, 'cidade: Rio de Janeiro'}
+print(aluno['cidade'])  # Rio de Janeiro
+```
