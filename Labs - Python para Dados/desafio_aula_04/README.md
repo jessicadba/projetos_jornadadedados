@@ -1,7 +1,7 @@
 ## Desafio Aula 04: Type hint, Tipos complexos (Dicionários vs DataFrames Vs Tabelas Vs Excel) e Funções
 **Exercícios de Listas e Dicionários**
 
-- Criar uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
+- Criar uma lista com os números de 1 a 10 utilizando um loop para imprimir cada número elevado ao quadrado.
 - Dada a lista ["Python", "Java", "C++", "JavaScript"], remover o item "C++" e adicionar "Ruby".
 - Criar um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
 - Escrever um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
